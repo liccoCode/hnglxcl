@@ -1,0 +1,29 @@
+cted from https://github.com/ulrich/macaron-factory/blob/master/.gitignore
+# Ignore all dotfiles...
+.*
+# except for .gitignore
+!.gitignore
+!.eslintrc
+*.jar
+*.class
+
+# Ignore Play! working directory #
+db
+eclipse
+log
+logs
+precompiled
+tmp
+test-result
+eclipse
+modules
+server.pid
+*.log
+*.rdb
+*.iml
+*.ipr
+*.iws
+*.ids
+/out
+core/test/*.json
+core/lib

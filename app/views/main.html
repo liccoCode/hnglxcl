@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>#{get 'title' /}</title>
+    <meta charset="${_response_encoding}">
+    <link rel="shortcut icon" type="image/png" href="@{'/public/images/logo_title.png'}">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Source+Sans+Pro:400,700' rel='stylesheet'
+          type='text/css'/>
+#{render '_js_header.html' /}
+#{get 'moreScripts' /}
+
+#{render '_css_header.html' /}
+#{get 'moreStyles' /}
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=VB4Gu4Nx3keIMiIkpm69n91NiCsxo5nt"></script>
+
+</head>
+<body id="to-top">
+#{render 'header.html'/}
+#{doLayout /}
+
+ #{render 'footer.html'/}
+</body>
+</html>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("gmaps");    // 创建Map实例
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+    //添加地图类型控件
+    map.addControl(new BMap.MapTypeControl({
+        mapTypes: [
+            BMAP_NORMAL_MAP,
+            BMAP_HYBRID_MAP
+        ]
+    }));
+    map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+</script>
