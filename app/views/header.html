@@ -2,9 +2,7 @@
     <div id="header" class="main-header">
         <div class="container">
             <div class="two columns" id="logo-wrap">
-                <a href="index.html">
-                    <div id="logo"></div>
-                </a>
+                <a href="@{Application.index()}"><div id="logo"></div></a>
                 <select id="header-mobile-menu">
                     <option value="index.html"/>
                     Home
@@ -61,10 +59,10 @@
 
                 </select>
             </div>
-            <div class="twenty columns">
+            <div class="twenty-one columns">
                 <nav>
                     <ul id="menu-header-menu" class="menu">
-                        <li><a href="index.html">首页</a></li>
+                        <li><a href="@{Application.index()}">首页</a></li>
                          <li><a href="blog.html">关于固力</a>
                             <ul class="sub-menu">
                                 <li class="triangle"><img src="../public/images/triangle.png"/></li>

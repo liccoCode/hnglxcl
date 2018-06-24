@@ -89,11 +89,11 @@ $(document).ready(function() {
 	});
 	
 	//Twitter Feed for footer
-	$('#tweet-feed').twitterfeed('envatowebdesign', {
+/*	$('#tweet-feed').twitterfeed('envatowebdesign', {
 		limit:3,
 		header:false,
 		tweeticon:false
-	});
+	});*/
 	
 	//Delete last delimeter
 	$('.twitterBody li:last, #contact-address span:last, #contact-method li:last, #blog-post-sidebar li:last, .testimonials-wrap:last').css('borderBottom','none');

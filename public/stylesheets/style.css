@@ -257,6 +257,7 @@ div b {
 .container .sixteen.columns                 { width: 940px; }
 .container .eighteen.columns                { width: 1060px; }
 .container .twenty.columns                  { width: 1180px; }
+.container .twenty-one.columns              { width: 1240px; }
 .container .one-third.column                { width: 300px; }
 .container .two-thirds.column               { width: 620px; }
 
@@ -367,6 +368,12 @@ body {
 }
 
 .main-header .twenty {
+	height:87px;
+	border-top:3px solid #146492;
+	background:url(../images/slider-bg.png);
+}
+
+.main-header .twenty-one {
 	height:87px;
 	border-top:3px solid #146492;
 	background:url(../images/slider-bg.png);
