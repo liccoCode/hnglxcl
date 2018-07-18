@@ -1,0 +1,67 @@
+#{extends 'main.html'/}
+#{set title:'联系我们'/}
+
+<div class="slider-wrapper theme-default">
+    <div style="height: 300px;width: 100%;">
+        <img src="../public/images/banner/contract.jpg" style="height: 300px; width: 100%;" alt="" title="#htmlcaption3"/>
+    </div>
+</div>
+
+<div class="container">
+    <div class="twelve columns left-content contact-page">
+        <h1>Visit Us</h1>
+        <div id="visit-us-text">Donec eget nisl libero. In tincidunt mauris id tellus interdum non commodo nisl
+            ultrices. Duis sollicitudin sapien et est condimentum ornare. Integer ut nibh eu orci lacinia molestie.
+            Donec consectetur nisl ac odio tempor tristique. Maecenas consequat tristique tincidunt. Integer quis tellus
+            ac tellus consectetur porta quis ut nunc.
+        </div>
+        <div id="contact-gmaps"></div>
+        <h1>Contact Us</h1>
+        <div id="contact-form">
+            <div id="contact-form-text">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                Curae; Aliquam facilisis, velit consectetur iaculis venenatis, orci sem venenatis leo, in feugiat felis
+                arcu eget metus. Cras a luctus nunc. Morbi non quam elit.
+            </div>
+            <div class="done">
+                <b>Thank you !</b> We have received your message.
+            </div>
+            <form action="contact.php" method="POST"/>
+            <label for="name">Name <span>*</span></label>
+            <input type="text" name="name" id="name"/>
+            <label for="email">Email <span>*</span></label>
+            <input type="text" name="email" id="email"/>
+            <label for="telephone">Telephone</label>
+            <input type="text" name="phone" id="phone"/>
+            <label for="message">Comment <span>*</span></label>
+            <textarea name="message" id="message"></textarea>
+            <input type="submit" id="submit-button" value="Submit"/>
+            <div class="bg-envelop"></div>
+            </form>
+        </div>
+    </div>
+    <div class="four columns right-content">
+        <div class="sidebar-header">Contact Us</div>
+        <p id="pre-method-text">You also can easily contact us through following methods:</p>
+        <ul id="contact-method">
+            <li id="contact-telephone">(telephone:) <br/><span>+474-7457-3749</span></li>
+            <li id="contact-email">(email:) <br/><span>example@mail.com</span></li>
+            <li id="contact-skype">(skype:) <br/><span>skypeusername</span></li>
+        </ul>
+        <div class="sidebar-header">About Us</div>
+        <div id="aboutus-sidebar">
+            <p>Donec velit nisl, rhoncus a elementum ac, tempus vel felis. Vestibulum ac quam vel libero auctor vehicula
+                eget ut mauris.</p>
+            <p>Morbi ornare imperdiet interdum. Nullam pulvinar malesuada elementum. Morbi eu massa sed orci condimentum
+                venenatis a vitae velit. Donec tincidunt justo ut lacus mollis convallis.</p>
+        </div>
+        <div class="sidebar-header">Last Post in Blog</div>
+        <ul id="blog-post-sidebar">
+            <li><a href="single.html">Vestibulum ac quam vel</a><br/><span>by David Baker</span></li>
+            <li><a href="single.html">Duis ullamcorper ipsum</a><br/><span>by John Smith</span></li>
+            <li><a href="single.html">Post without image</a><br/><span>by Thomas Stark</span></li>
+            <li><a href="single.html">Post without image</a><br/><span>by Thomas Stark</span></li>
+        </ul>
+        <div class="sidebar-header">Flickr Feed</div>
+        <ul id="flickr-feed"></ul>
+    </div>
+</div>

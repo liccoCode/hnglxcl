@@ -63,45 +63,30 @@
                 <nav>
                     <ul id="menu-header-menu" class="menu">
                         <li><a href="@{Application.index()}">首页</a></li>
-                         <li><a href="blog.html">关于固力</a>
+                         <li><a href="@{Infos.index()}">关于固力</a></li>
+                        <li><a href="@{News.companyNewsIndex()}">新闻资讯</a>
                             <ul class="sub-menu">
                                 <li class="triangle"><img src="../public/images/triangle.png"/></li>
-                                <li><a href="blog.html">固力简介</a></li>
-                                <li><a href="blog-left.html">专家风采</a></li>
-                                <li><a href="blog-fullwidth.html">荣誉资质</a></li>
+                                <li><a href="@{News.companyNewsIndex()}">公司新闻</a></li>
+                                <li><a href="@{News.companyNewsIndex()}">行业资讯</a></li>
                             </ul>
                         </li>
-                        <li><a href="gallery.html">新闻资讯</a>
+                        <li><a href="@{Products.productIndex()}">产品与服务</a>
                             <ul class="sub-menu">
                                 <li class="triangle"><img src="../public/images/triangle.png"/></li>
-                                <li><a href="gallery.html">公司新闻</a></li>
-                                <li><a href="gallery-sidebar.html">行业资讯</a></li>
+                                <li><a href="@{Products.productIndex()}">产品</a></li>
+                                <li><a href="@{Products.serviceIndex()}">服务</a></li>
                             </ul>
                         </li>
-                        <li><a href="pages.html">产品与服务</a>
-                            <ul class="sub-menu">
-                                <li class="triangle"><img src="../public/images/triangle.png"/></li>
-                                <li><a href="pages.html">产品</a></li>
-                                <li><a href="pages-left-sidebar.html">服务</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="columns.html">工程应用</a>
+                        <li><a href="@{News.projectIndex}">工程应用</a>
                             <ul class="sub-menu">
                                 <li class="triangle"><img src="../public/images/triangle.png"/></li>
                                 <li><a href="columns.html">经典案例</a></li>
                                 <li><a href="buttons.html">应用实例</a></li>
                             </ul>
                         </li>
-                        <li><a href="contact.html">科技创新</a>
-                            <ul class="sub-menu">
-                                <li class="triangle"><img src="../public/images/triangle.png"/></li>
-                                <li><a href="contact.html">专利成果</a></li>
-                                <li><a href="appointment.html">核心技术</a></li>
-                                <li><a href="appointment.html">技术规范</a></li>
-                                <li><a href="appointment.html">新材料专栏</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">联系我们</a>
+                        <li><a href="@{Sciences.index()}">科技创新</a></li>
+                        <li><a href="@{Application.contactPage()}">联系我们</a>
                             <ul class="sub-menu">
                                 <li class="triangle"><img src="../public/images/triangle.png"/></li>
                                 <li><a href="contact.html">联系方式</a></li>
@@ -109,7 +94,7 @@
                                 <li><a href="appointment.html">人才招聘</a></li>
                             </ul>
                         </li>
-                        <li><a href="contact.html">合作加盟</a></li>
+                        <li><a href="@{Cooperations.index()}">合作加盟</a></li>
                     </ul>
                 </nav>
             </div>
