@@ -14,8 +14,35 @@ public class News extends Controller {
         render();
     }
 
-    public static void projectIndex(){
+    public static void projectIndex() {
         render();
     }
 
+    public static void applicationIndex() {
+        render();
+    }
+
+    public static void bbgPage() {
+        render();
+    }
+
+    public static void xiangYaPage() {
+        render();
+    }
+
+    public static void cstPage(){
+        render();
+    }
+
+    public static void dthPage(){
+        render();
+    }
+
+    public static void azPage(){
+        render();
+    }
+
+    public static void njPage(){
+           render();
+       }
 }

@@ -18,4 +18,8 @@ public class Products extends Controller {
         render();
     }
 
+    public static void show() {
+        render();
+    }
+
 }

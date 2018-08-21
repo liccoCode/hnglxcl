@@ -2,7 +2,9 @@
     <div id="header" class="main-header">
         <div class="container">
             <div class="two columns" id="logo-wrap">
-                <a href="@{Application.index()}"><div id="logo"></div></a>
+                <a href="@{Application.index()}">
+                    <div id="logo"></div>
+                </a>
                 <select id="header-mobile-menu">
                     <option value="index.html"/>
                     Home
@@ -63,12 +65,12 @@
                 <nav>
                     <ul id="menu-header-menu" class="menu">
                         <li><a href="@{Application.index()}">首页</a></li>
-                         <li><a href="@{Infos.index()}">关于固力</a></li>
-                        <li><a href="@{News.companyNewsIndex()}">新闻资讯</a>
+                        <li><a href="@{Infos.index()}">关于固力</a></li>
+                        <li><a href="javascript:void(0);">新闻资讯</a>
                             <ul class="sub-menu">
                                 <li class="triangle"><img src="../public/images/triangle.png"/></li>
-                                <li><a href="@{News.companyNewsIndex()}">公司新闻</a></li>
-                                <li><a href="@{News.companyNewsIndex()}">行业资讯</a></li>
+                                <li><a href="javascript:void(0);">公司新闻</a></li>
+                                <li><a href="javascript:void(0);">行业资讯</a></li>
                             </ul>
                         </li>
                         <li><a href="@{Products.productIndex()}">产品与服务</a>
@@ -78,20 +80,20 @@
                                 <li><a href="@{Products.serviceIndex()}">服务</a></li>
                             </ul>
                         </li>
-                        <li><a href="@{News.projectIndex}">工程应用</a>
+                        <li><a href="javascript:void(0)">工程应用</a>
                             <ul class="sub-menu">
                                 <li class="triangle"><img src="../public/images/triangle.png"/></li>
-                                <li><a href="columns.html">经典案例</a></li>
-                                <li><a href="buttons.html">应用实例</a></li>
+                                <li><a href="@{News.projectIndex}">经典案例</a></li>
+                                <li><a href="@{News.applicationIndex()}">应用实例</a></li>
                             </ul>
                         </li>
                         <li><a href="@{Sciences.index()}">科技创新</a></li>
                         <li><a href="@{Application.contactPage()}">联系我们</a>
                             <ul class="sub-menu">
                                 <li class="triangle"><img src="../public/images/triangle.png"/></li>
-                                <li><a href="contact.html">联系方式</a></li>
-                                <li><a href="appointment.html">常见问题</a></li>
-                                <li><a href="appointment.html">人才招聘</a></li>
+                                <li><a href="@{Application.contactPage()}">联系方式</a></li>
+                                <li><a href="@{Application.contactPage()}">常见问题</a></li>
+                                <li><a href="@{Application.jobs()}">人才招聘</a></li>
                             </ul>
                         </li>
                         <li><a href="@{Cooperations.index()}">合作加盟</a></li>
