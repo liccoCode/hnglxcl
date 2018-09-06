@@ -35,8 +35,8 @@ public class Products extends Controller {
     public static void show(Long id) {
         Product product = Product.findById(id);
         product.feature = product.feature.replaceAll("<br />", "");
-        product.application = product.feature.replaceAll("<br />", "");
-        product.description = product.feature.replaceAll("<br />", "");
+        product.application = product.application.replaceAll("<br />", "");
+        product.description = product.description.replaceAll("<br />", "");
         render(product);
     }
 
