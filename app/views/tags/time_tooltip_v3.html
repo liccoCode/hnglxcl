@@ -1,0 +1,10 @@
+*{
+datetime:true? default: false
+short:true? default: false
+}*
+#{if _short}
+${_time.los()}
+#{/if}
+#{else }
+${_datetime ? _time.datetime() : _time.date()}
+#{/else}

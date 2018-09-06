@@ -1,5 +1,6 @@
 package controllers;
 
+import models.NewsData;
 import models.Product;
 import play.mvc.Controller;
 import play.mvc.With;
@@ -15,13 +16,23 @@ import java.util.List;
 @With({Secure.class})
 public class Systems extends Controller {
 
-    public static void productIndex(){
+    public static void productIndex() {
         List<Product> products = Product.findAll();
         render(products);
     }
 
-    public static void addProduct(){
+    public static void newsIndex() {
+        List<NewsData> newsDataList = NewsData.findAll();
+        render(newsDataList);
+    }
+
+    public static void addProduct() {
         render();
+    }
+
+    public static void addNews() {
+        NewsData n = new NewsData();
+        render(n);
     }
 
 

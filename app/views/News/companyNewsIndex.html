@@ -9,59 +9,32 @@
 
 <div class="container">
     <div class="twenty columns left-content">
+    #{list items:newsDataList, as:'n'}
         <div class="blogpost-wrap">
             <div class="blog-title">
-                <a href="single.html" style="font-size:25px;">我国首座超高性能混凝土桥梁在湘验收 有望突破普通混凝土工程极限</a>
+                <a href="@{News.show(n.id)}" style="font-size:25px;">${n.title}</a>
             </div>
             <div class="blog-meta" style="width: 800px;">
                 <ul>
-                    <li class="blog-date">日期: <span>2016-09-07</span></li>
-                    <li class="blog-author">来源: <span>科学网</span></li>
-                    <li class="blog-category">类别: <span>行业新闻</span></li>
+                    <li class="blog-date">日期: <span>#{time_tooltip_v3 time:n.createDate/}</span></li>
+                    <li class="blog-author">来源: <span>${n.source}</span></li>
+                    <li class="blog-category">类别: <span>${n.type.label()}</span></li>
                 </ul>
             </div>
-            <div class="blog-image"><a href="single.html"><img src="../public/images/news/2.jpg" style="width: 800px; height: 480px;"/></a></div>
+            <div class="blog-image"><a href="javascript:void(0);"><img src="@{News.image(n.id)}" style="width: 800px; height: 480px;"/></a></div>
             <div class="blog-content">
                 <div class="blog-text" style="width: 90%;">
-                    <p> 科学网讯（记者
-                        成舸）9月5日，我国第一座采用活性粉末混凝土建成的桥梁在长沙通过湖南省住建厅组织的验收。包括3位中国工程院院士在内的专家组认为，该桥梁达到同类桥梁建造的国际先进水平，其积累的设计理论和施工技术具有极强的探索示范价值，为该新型混凝土材料在我国的工程应用奠定了基础。
-                    </p>
-                    <p>
-                        该桥位于长沙市北辰三角洲，是一座跨街天桥，主跨36.8米，一跨过街，桥下车行道不设桥墩，重量较原普通混凝土方案减轻近1/3，承载和长期性能更是大幅提升。该桥由湖南明湘科技有限公司承建，湖南大学承担结构研发设计及技术支持，于今年1月8日建成并投入使用。这也是国际上首座采用全预制拼装工艺建成的超高性能混凝土车行箱梁桥。
-                    </p>
-                    <p><a href="@{News.show()}">Read More ...</a></p>
+                    <pre style="white-space: pre-wrap; word-wrap: break-word;">${n.outline}</pre>
+                    <p><a href="@{News.show(n.id)}">Read More ...</a></p>
                 </div>
             </div>
             <div style="clear:both"></div>
         </div>
-        <div class="blogpost-wrap">
-            <div class="blog-title"><a href="single.html" style="font-size:30px;">长沙建成世界首座超高性能混凝土桥</a></div>
-            <div class="blog-meta">
-                <ul>
-                    <li class="blog-date">日期: <span>2016-01-09</span></li>
-                    <li class="blog-author">来源: <span>长沙晚报</span></li>
-                    <li class="blog-category">类别: <span>行业新闻</span></li>
-                </ul>
-
-            </div>
-            <div class="blog-image"><a href="single.html"><img src="../public/images/news/1.jpg" style="width: 800px; height: 480px;"/></a></div>
-            <div class="blog-content">
-                <div class="blog-text" style="width: 90%;">
-                    <p>长沙晚报讯(记者 陈焕明 通讯员 刘攀)昨日上午10时许，一座长70.8米、宽6.5米的跨街天桥在北辰三角洲横四路竣工。这座看似普通的天桥，是世界首座全预制拼装超高性能混凝土(一种活性纳米无机复合材料)桥梁。也就是说，不仅它的混凝土由具有超高强度和韧性的特殊材料制成，而且它是先在工厂预制，然后拖运至现场，在10小时内拼装
-                        搭建而成的。中国工程院院士聂建国、陈政清及众多土木工程专家共同见证了这座天桥的诞生。长沙晚报讯(记者 陈焕明 通讯员
-                        刘攀)昨日上午10时许，一座长70.8米、宽6.5米的跨街天桥在北辰三角洲横四路竣工。这座看似普通的天桥，是世界首座全预制拼装超高性能混凝土(一种活性纳米无机复合材料)桥梁。也就是说，不仅它的混凝土由具有超高强度和韧性的特殊材料制成，而且它是先在工厂预制，然后拖运至现场，在10小时内拼装
-                        搭建而成的。中国工程院院士聂建国、陈政清及众多土木工程专家共同见证了这座天桥的诞生。</p>
-                    <p><a href="@{News.show2()}">Read More ...</a></p>
-                </div>
-            </div>
-            <div style="clear:both"></div>
-        </div>
-
+    #{/list}
 
         <div class="pagenavi">
-            <span class="pages">&#8201;Page 1 of 2&#8201;</span>
+            <span class="pages">&#8201;Page 1 of 1&#8201;</span>
             <span class="current">&#8201;1&#8201;</span>
-            <a href="" title="2">&#8201;2&#8201;</a>
             <a href="">&raquo;</a>
         </div>
     </div>

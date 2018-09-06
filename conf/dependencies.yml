@@ -5,3 +5,4 @@ require:
 # modules
     - play -> secure
     - play -> crud
+    - play -> pdf 0.9

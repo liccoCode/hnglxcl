@@ -9,6 +9,7 @@ import play.utils.FastRuntimeException;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -20,26 +21,33 @@ import java.util.Objects;
 public class Products extends Controller {
 
     public static void productIndex() {
-        render();
+        List<Product> hyjList = Product.find("type=?", Product.T.HYJ).fetch();
+        List<Product> gxnsnList = Product.find("type=?", Product.T.GXNSN).fetch();
+        List<Product> jhwgxsnList = Product.find("type=?", Product.T.JHWGXSN).fetch();
+        List<Product> cgxnhntList = Product.find("type=?", Product.T.CGXNHNT).fetch();
+        render(hyjList, gxnsnList, jhwgxsnList, cgxnhntList);
     }
 
     public static void serviceIndex() {
         render();
     }
 
-    public static void show() {
-        Product product = Product.findById(1l);
+    public static void show(Long id) {
+        Product product = Product.findById(id);
+        product.feature = product.feature.replaceAll("<br />", "");
+        product.application = product.feature.replaceAll("<br />", "");
+        product.description = product.feature.replaceAll("<br />", "");
         render(product);
     }
 
-    public static void downloadPDF() {
-        render();
+    public static void downloadPDF(Long id) {
+        Product product = Product.findById(id);
+        File pdf = new File(product.pdf);
+        renderBinary(pdf);
     }
 
     public static void createProduct(Product p) {
         p.createDate = new Date();
-        p.feature = p.feature.replaceAll("<br />", "");
-        p.application = p.application.replaceAll("<br />", "");
         p.save();
         Systems.productIndex();
     }
@@ -54,6 +62,7 @@ public class Products extends Controller {
         }
         if (Objects.equals("pdf", type)) {
             product.pdf = path;
+            product.pdfName = uploadFile.getName();
         } else {
             product.href = path;
         }
@@ -64,13 +73,17 @@ public class Products extends Controller {
 
     public static void image(Long id) {
         Product product = Product.findById(id);
-
         if (product != null) {
             File file = new File(product.href);
             renderBinary(file);
-        } else
+        } else {
             throw new FastRuntimeException("No File Found.");
+        }
+    }
 
+    public static void edit(Long id) {
+        Product p = Product.findById(id);
+        render("/Systems/addProduct.html", p);
     }
 
 }

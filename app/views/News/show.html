@@ -11,26 +11,18 @@
     <div class="twenty columns left-content">
         <div class="blogpost-wrap">
             <div class="blog-title">
-                <a href="single.html" style="font-size:25px;">我国首座超高性能混凝土桥梁在湘验收 有望突破普通混凝土工程极限</a>
+                <a href="javascript:void(0);" style="font-size:25px;">${n.title}</a>
             </div>
             <div class="blog-meta" style="width: 800px;">
                 <ul>
                     <li class="blog-date">日期: <span>9 August, 2012</span></li>
-                    <li class="blog-author">来源: <span>Ray Johnson</span></li>
-                    <li class="blog-category">类别: <span>行业新闻</span></li>
+                    <li class="blog-author">来源: <span>${n.source}</span></li>
+                    <li class="blog-category">类别: <span>${n.type.label()}</span></li>
                 </ul>
             </div>
-            <div class="blog-image"><a href="single.html"><img src="../public/images/news/2.jpg" style="width: 800px; height: 480px;"/></a></div>
+            <div class="blog-image"><a href="javascript:void(0);"><img src="@{News.image(n.id)}" style="width: 800px; height: 480px;"/></a></div>
             <div class="blog-content">
-                <div class="blog-text" style="width: 90%;">
-                    <p> 科学网讯（记者
-                        成舸）9月5日，我国第一座采用活性粉末混凝土建成的桥梁在长沙通过湖南省住建厅组织的验收。包括3位中国工程院院士在内的专家组认为，该桥梁达到同类桥梁建造的国际先进水平，其积累的设计理论和施工技术具有极强的探索示范价值，为该新型混凝土材料在我国的工程应用奠定了基础。
-                    </p>
-                    <p>
-                        该桥位于长沙市北辰三角洲，是一座跨街天桥，主跨36.8米，一跨过街，桥下车行道不设桥墩，重量较原普通混凝土方案减轻近1/3，承载和长期性能更是大幅提升。该桥由湖南明湘科技有限公司承建，湖南大学承担结构研发设计及技术支持，于今年1月8日建成并投入使用。这也是国际上首座采用全预制拼装工艺建成的超高性能混凝土车行箱梁桥。
-                    </p>
-                
-                </div>
+                <div class="blog-text" style="width: 90%;"><pre style="white-space: pre-wrap; word-wrap: break-word;">${n.content}</pre></div>
             </div>
             <div style="clear:both"></div>
         </div>

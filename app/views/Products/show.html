@@ -27,25 +27,25 @@
                 <h4 style="color: #444444;"><b>${product.name}</b></h4>
                 <div style="height: 5px;"></div>
                 <div style="font-size: 14px;">产品描述：</div>
-                <span style="line-height:25px; font-size: 14px;"><pre>${product.description}</pre></span>
+                <span style="line-height:25px; font-size: 14px;">${product.description}</span>
             </div>
             <div style="height: 20px;"></div>
             <hr>
             <div style="color: #4169E1; font-size: 16px;"><b>▍&nbsp;产品特点</b></div>
             <p></p>
-            <span style="line-height:25px; font-size: 14px;"><pre>${product.feature}</pre></span>
+            <div style="line-height:25px; font-size: 14px;"><pre>${product.feature}</pre></div>
             <p></p>
             <hr>
             <div style="color: #4169E1; font-size: 16px;"><b>▍&nbsp;适用范围</b></div>
             <p></p>
-            <span style="line-height:25px; font-size: 14px;"><pre>${product.application}</pre></span>
+            <span style="line-height:25px; font-size: 14px;">${product.application}</span>
             <p></p>
             <hr>
             <div style="color: #4169E1; font-size: 16px;"><b>▍&nbsp;相关资料下载</b></div>
             <p></p>
             <span style="line-height:25px; font-size: 14px;">
                 <img src="../public/images/product/pdf.png">
-                <a href="../public/images/product/pdf/ESA.pdf" target="_blank" style="cursor: pointer;text-decoration:none;">ESA 建筑结构胶.pdf</a>
+                <a href="@{Products.downloadPDF(product.id)}" target="_blank" style="cursor: pointer;text-decoration:none;">${product.pdfName}</a>
             </span>
             <p></p>
             <hr>

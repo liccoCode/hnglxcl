@@ -22,18 +22,23 @@
         </ul>
         <div id="tabs-1">
             <div id="gallery-wrap">
+            #{list items:hyjList, as:'h'}
                 <div class="gallery-img-wrap">
                     <div class="gallery-image">
-                        <img src="../public/images/product/hyj/esa001.jpg"/>
+                        <img src="@{Products.image(h.id)}"/>
                         <div class="magnifier-icon"></div>
                     </div>
                     <div class="gallery-text-wrap">
-                        <div class="gallery-text-title"><a href="@{Products.show()}" style="cursor: pointer;text-decoration:none;color: #6D98F1;">ESA建筑结构胶</a></div>
+                        <div class="gallery-text-title"><a href="@{Products.show(h.id)}" style="cursor: pointer;text-decoration:none;color: #6D98F1;">${h.name}</a></div>
                         <div class="gallery-text">
-                            <p>ESA 建筑结构胶是改性环氧树脂类的 A、B 双组份建筑结构胶。</p>
+                            <p>${h.subName}</p>
                         </div>
                     </div>
                 </div>
+            #{/list}
+
+
+
                 <div class="gallery-img-wrap">
                     <div class="gallery-image">
                         <img src="../public/images/news/xy/TJ.jpg"/>
@@ -46,7 +51,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="gallery-img-wrap last-gallery-img">
+                <div class="gallery-img-wrap ">
                     <div class="gallery-image">
                         <img src="../public/images/news/xy/TD.jpg"/>
                         <div class="magnifier-icon"></div>
@@ -58,7 +63,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="gallery-img-wrap">
+                <div class="gallery-img-wrap last-gallery-img">
                     <div class="gallery-image">
                         <img src="../public/images/news/xy/TZ.jpg"/>
                         <div class="magnifier-icon"></div>
@@ -148,6 +153,23 @@
 
         <div id="tabs-2">
             <div id="gallery-wrap">
+            #{list items:gxnsnList, as:'h'}
+                <div class="gallery-img-wrap">
+                    <div class="gallery-image">
+                        <img src="@{Products.image(h.id)}"/>
+                        <div class="magnifier-icon"></div>
+                    </div>
+                    <div class="gallery-text-wrap">
+                        <div class="gallery-text-title"><a href="@{Products.show(h.id)}" style="cursor: pointer;text-decoration:none;color: #6D98F1;">${h.name}</a></div>
+                        <div class="gallery-text">
+                            <p>${h.subName}</p>
+                        </div>
+                    </div>
+                </div>
+            #{/list}
+
+
+
                 <div class="gallery-img-wrap">
                     <div class="gallery-image">
                         <img src="../public/images/product/gxnsn/WZJ-I.jpg"/>
@@ -214,6 +236,22 @@
 
         <div id="tabs-3">
             <div id="gallery-wrap">
+            #{list items:jhwgxsnList, as:'h'}
+                <div class="gallery-img-wrap">
+                    <div class="gallery-image">
+                        <img src="@{Products.image(h.id)}"/>
+                        <div class="magnifier-icon"></div>
+                    </div>
+                    <div class="gallery-text-wrap">
+                        <div class="gallery-text-title"><a href="@{Products.show(h.id)}" style="cursor: pointer;text-decoration:none;color: #6D98F1;">${h.name}</a></div>
+                        <div class="gallery-text">
+                            <p>${h.subName}</p>
+                        </div>
+                    </div>
+                </div>
+            #{/list}
+
+
                 <div class="gallery-img-wrap">
                     <div class="gallery-image">
                         <img src="../public/images/product/jhw/WJJ.jpg"/>
@@ -256,6 +294,20 @@
 
         <div id="tabs-4">
             <div id="gallery-wrap">
+            #{list items:cgxnhntList, as:'h'}
+                <div class="gallery-img-wrap" ${(h_index+1)%4==0?'last-gallery-img':''}>
+                    <div class="gallery-image">
+                        <img src="@{Products.image(h.id)}"/>
+                        <div class="magnifier-icon"></div>
+                    </div>
+                    <div class="gallery-text-wrap">
+                        <div class="gallery-text-title"><a href="@{Products.show(h.id)}" style="cursor: pointer;text-decoration:none;color: #6D98F1;">${h.name}</a></div>
+                        <div class="gallery-text">
+                            <p>${h.subName}</p>
+                        </div>
+                    </div>
+                </div>
+            #{/list}
                 <div class="gallery-img-wrap">
                     <div class="gallery-image">
                         <img src="../public/images/product/gxnhnt/GL-STC.jpg"/>

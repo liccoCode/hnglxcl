@@ -6,7 +6,7 @@
 <div class="row-fluid">
     <div class="col-md-12">
         <div class="form-group">
-            <a href="@{Systems.addProduct()}" class="btn btn-default">添加产品</a>
+            <a href="@{Systems.addNews()}" class="btn btn-default">添加新闻</a>
         </div>
     </div>
 </div>
@@ -17,24 +17,23 @@
             <tr>
                 <th>ID</th>
                 <td>名称</td>
+                <td>来源</td>
                 <td>类型</td>
                 <td>创建时间</td>
                 <td>首页图片</td>
-                <td>相关PDF</td>
                 <td>Action</td>
             </tr>
-        #{list items:products, as:'p'}
+        #{list items:newsDataList, as:'n'}
             <tr>
-                <td>${p.id}</td>
-                <td>${p.name}</td>
-                <td>${p.type.label()}</td>
-                <td><a href="javascript:void(0);" data-toggle="tooltip">${p.createDate}</a></td>
-                <td>${p.href}</td>
-                <td>${p.pdf}</td>
+                <td>${n.id}</td>
+                <td>${n.title}</td>
+                <td>${n.source}</td>
+                <td>${n.type.label()}</td>
+                <td><a href="javascript:void(0);" data-toggle="tooltip">${n.createDate}</a></td>
+                <td>${n.href}</td>
                 <td>
-                    <input type="button" class="btn btn-xs btn-warning" name="openModal" data-id="${p.id}" value="上传主图">
-                    <input type="button" class="btn btn-xs btn-info" name="openModal" data-id="${p.id}" value="上传PDF">
-                    <a href="@{Products.edit(p.id)}" class="btn btn-xs btn-danger">编辑</a>
+                    <input type="button" class="btn btn-xs btn-warning" name="openModal" data-id="${n.id}" value="上传主图">
+                    <a href="@{News.edit(n.id)}" class="btn btn-xs btn-danger">编辑</a>
                 </td>
             </tr>
         #{/list}
@@ -45,7 +44,7 @@
 
 
 <div class="modal fade" tabindex="-1" role="dialog" id="submitPdfModal">
-    <form action="@{Products.addPDF()}" enctype="multipart/form-data" method="post">
+    <form action="@{News.addPic()}" enctype="multipart/form-data" method="post">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">

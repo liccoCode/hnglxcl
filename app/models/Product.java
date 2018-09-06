@@ -18,6 +18,8 @@ public class Product extends Model {
 
     public String name;
 
+    public String subName;
+
     public enum T {
         HYJ {
             @Override
@@ -62,6 +64,8 @@ public class Product extends Model {
     public File file;
 
     public String pdf;
+
+    public String pdfName;
 
     @ManyToOne
     public User creator;
