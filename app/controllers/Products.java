@@ -66,7 +66,6 @@ public class Products extends Controller {
         } else {
             product.href = path;
         }
-
         product.save();
         Systems.productIndex();
     }
