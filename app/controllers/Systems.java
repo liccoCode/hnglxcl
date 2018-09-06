@@ -27,7 +27,8 @@ public class Systems extends Controller {
     }
 
     public static void addProduct() {
-        render();
+        Product p = new Product();
+        render(p);
     }
 
     public static void addNews() {
