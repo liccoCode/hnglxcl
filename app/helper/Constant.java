@@ -19,7 +19,7 @@ public class Constant {
     /**
      * 系统中产生的 "数据" 类型的文件
      */
-    public static final String E_DATE = String.format("%s/elcuk2-data", Constant.HOME);
+    public static final String E_DATE = String.format("%s/hnglxcl/hnglxcl-data", Constant.HOME);
 
     /**
      * 系统中产生的 "日志" 类型的文件
