@@ -1,0 +1,66 @@
+#{extends 'Systems/main_full.html'/}
+#{set 'moreScripts'}
+    #{script 'products/index.js'/}
+#{/set}
+
+<div class="row-fluid">
+    <div class="col-md-12">
+        <div class="form-group">
+            <a href="@{Systems.addProduct()}" class="btn btn-default">添加产品</a>
+        </div>
+    </div>
+</div>
+
+<div class="row-fluid">
+    <div class="col-md-12">
+        <table class="table table-bordered table-condensed">
+            <tr>
+                <th>ID</th>
+                <td>名称</td>
+                <td>类型</td>
+                <td>创建时间</td>
+                <td>首页图片</td>
+                <td>相关PDF</td>
+                <td>Action</td>
+            </tr>
+        #{list items:products, as:'p'}
+            <tr>
+                <td>${p.id}</td>
+                <td>${p.name}</td>
+                <td>${p.type.label()}</td>
+                <td><a href="javascript:void(0);" data-toggle="tooltip">${p.createDate}</a></td>
+                <td>${p.href}</td>
+                <td>${p.pdf}</td>
+                <td>
+                    <input type="button" class="btn btn-xs btn-warning" name="openModal" data-id="${p.id}" value="上传主图">
+                    <input type="button" class="btn btn-xs btn-info" name="openModal" data-id="${p.id}" value="上传PDF">
+                </td>
+            </tr>
+        #{/list}
+        </table>
+    </div>
+</div>
+<br>
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="submitPdfModal">
+    <form action="@{Products.addPDF()}" enctype="multipart/form-data" method="post">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <input type="file" name="uploadFile" class="form-control">
+                    <input type="hidden" value="" name="id" id="productId">
+                    <input type="hidden" value="" name="type" id="uploadType">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">上传</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

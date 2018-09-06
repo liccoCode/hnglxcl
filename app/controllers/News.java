@@ -30,19 +30,27 @@ public class News extends Controller {
         render();
     }
 
-    public static void cstPage(){
+    public static void cstPage() {
         render();
     }
 
-    public static void dthPage(){
+    public static void dthPage() {
         render();
     }
 
-    public static void azPage(){
+    public static void azPage() {
         render();
     }
 
-    public static void njPage(){
-           render();
-       }
+    public static void njPage() {
+        render();
+    }
+
+    public static void show() {
+        render();
+    }
+
+    public static void show2() {
+        render();
+    }
 }

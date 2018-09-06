@@ -2,3 +2,6 @@
 
 require:
     - play
+# modules
+    - play -> secure
+    - play -> crud

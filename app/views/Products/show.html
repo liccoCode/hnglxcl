@@ -1,6 +1,12 @@
 #{extends 'main.html'/}
 #{set title:'产品列表'/}
 
+<style>
+    a:hover {
+        color: #4169E1;
+    }
+</style>
+
 <div class="slider-wrapper theme-default">
     <div style="height: 300px;width: 100%;">
         <img src="../public/images/banner/product.jpg" style="height: 300px; width: 100%;" alt="" title="#htmlcaption3"/>
@@ -8,24 +14,41 @@
 </div>
 
 <div class="container">
-    <div style="width:80%;">
-        <div>
-            <img src="../public/images/application/al/步步高商业广场加固工程小图.jpg" title="#htmlcaption3" class="left-align-image" style="margin-top: 0px;"/>
-            <br/>
-            <h5><b>步步高商业广场加固工程</b></h5>
-            <p></p>
-            <div>
-                该工程业主为湘潭市步步高商业连锁股份有限公司，原设计单位为湘潭市第二建筑设计院，由中南大学土木工程检测中心检测，本工程平面由二段近似矩形夹一个弧形而成，建筑面积约为21000㎡。建筑高度约20m，基础形式为独立基础。
-            </div>
-            <p></p>
-        </div>
-    </div>
-</div>
-
-<div class="container">
     <div class="tabs">
+        <ul>
+            <li><a href="#tabs-1">产品简介</a></li>
+        </ul>
+
         <div id="tabs-1">
-            <div><b>产品特点</b></div>
+            <br>
+            <div style="width:100%; height: 167px;">
+                <img src="~${product.href}" title="${product.href}" class="left-align-image" style="margin-top: 0px;"/>
+                <br/>
+                <h4 style="color: #444444;"><b>${product.name}</b></h4>
+                <div style="height: 5px;"></div>
+                <div style="font-size: 14px;">产品描述：</div>
+                <span style="line-height:25px; font-size: 14px;"><pre>${product.description}</pre></span>
+            </div>
+            <div style="height: 20px;"></div>
+            <hr>
+            <div style="color: #4169E1; font-size: 16px;"><b>▍&nbsp;产品特点</b></div>
+            <p></p>
+            <span style="line-height:25px; font-size: 14px;"><pre>${product.feature}</pre></span>
+            <p></p>
+            <hr>
+            <div style="color: #4169E1; font-size: 16px;"><b>▍&nbsp;适用范围</b></div>
+            <p></p>
+            <span style="line-height:25px; font-size: 14px;"><pre>${product.application}</pre></span>
+            <p></p>
+            <hr>
+            <div style="color: #4169E1; font-size: 16px;"><b>▍&nbsp;相关资料下载</b></div>
+            <p></p>
+            <span style="line-height:25px; font-size: 14px;">
+                <img src="../public/images/product/pdf.png">
+                <a href="../public/images/product/pdf/ESA.pdf" target="_blank" style="cursor: pointer;text-decoration:none;">ESA 建筑结构胶.pdf</a>
+            </span>
+            <p></p>
+            <hr>
         </div>
     </div>
 </div>

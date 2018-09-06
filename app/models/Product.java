@@ -1,10 +1,11 @@
 package models;
 
+import helper.Constant;
 import play.db.jpa.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import javax.persistence.*;
+import java.io.File;
+import java.util.Date;
 
 /**
  * Created by IntelliJ IDEA.
@@ -51,5 +52,23 @@ public class Product extends Model {
 
     public String href;
 
+    public String description;
 
+    public String feature;
+
+    public String application;
+
+    @Transient
+    public File file;
+
+    public String pdf;
+
+    @ManyToOne
+    public User creator;
+
+    public Date createDate;
+
+    public String location(String fileName) {
+        return String.format("%s/%s/%s", Constant.UPLOAD_PATH, type, fileName);
+    }
 }
