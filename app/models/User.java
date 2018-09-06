@@ -34,7 +34,6 @@ public class User extends Model {
     @Password
     public String passwordDigest;
 
-    @Transient
     public String password;
 
 
@@ -64,7 +63,7 @@ public class User extends Model {
      * @return
      */
     public boolean authenticate(String password) {
-        return !StringUtils.isBlank(this.passwordDigest) && this.passwordDigest.equals(Crypto.encryptAES(password));
+        return !StringUtils.isBlank(this.password) && this.password.equals(Crypto.encryptAES(password));
     }
 
     /**
