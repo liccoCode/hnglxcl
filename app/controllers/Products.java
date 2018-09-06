@@ -4,6 +4,7 @@ import models.Product;
 import org.apache.commons.io.FileUtils;
 import play.mvc.Controller;
 import play.mvc.Http;
+import play.utils.FastRuntimeException;
 
 import java.io.File;
 import java.io.IOException;
@@ -56,8 +57,20 @@ public class Products extends Controller {
         } else {
             product.href = path;
         }
+
         product.save();
         Systems.productIndex();
+    }
+
+    public static void image(Long id) {
+        Product product = Product.findById(id);
+
+        if (product != null) {
+            File file = new File(product.href);
+            renderBinary(file);
+        } else
+            throw new FastRuntimeException("No File Found.");
+
     }
 
 }

@@ -19,7 +19,7 @@ public class Constant {
     /**
      * 系统中产生的 "数据" 类型的文件
      */
-    public static final String E_DATE = String.format("%s/hnglxcl/hnglxcl-data", Constant.HOME);
+    public static final String E_DATE = String.format("%s/elcuk2-data", Constant.HOME);
 
     /**
      * 系统中产生的 "日志" 类型的文件
@@ -65,6 +65,8 @@ public class Constant {
      * 上传的文件的地址
      */
     public static final String UPLOAD_PATH = String.format("%s/uploads", Constant.E_DATE);
+
+    public static final String UPLOAD_PRODUCT_PATH = String.format("%s/uploads", Constant.E_DATE);
 
     public static final String HTTP_PATH = String.format("%s/http", Constant.E_DATE);
 
